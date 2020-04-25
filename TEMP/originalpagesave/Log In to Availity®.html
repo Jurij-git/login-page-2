@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)https://apps.availity.com/availity/web/public.elegant.login -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!--  <meta http-equiv="X-UA-Compatible" content="IE=8" > -->
+	<title>Log In to Availity®</title>
+	<script language="javascript">
+		if (top.location != location) {
+			top.location.href = document.location.href;
+		} else {
+			var hashIndex = top.location.href.indexOf('#');
+			if (hashIndex > 0) {
+				var hashString = encodeURIComponent(top.location.href.substring(hashIndex));
+				top.location.href = top.location.href.substring(0, hashIndex) + hashString;
+			}
+	  	}
+		var supportLocalStorage = typeof window.localStorage !== 'undefined';
+		if (supportLocalStorage) {
+			var localStorageTemp = window.localStorage;
+			localStorageTemp.setItem('avCacheBust', new Date().getTime());
+		}
+	</script>
+<link rel="stylesheet" type="text/css" href="./Log In to Availity®_files/jquery-ui-1.8.12.custom.css" media="all">
+<script type="text/javascript" src="./Log In to Availity®_files/jquery-1.5.1.min.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/jquery-ui-1.8.12.custom.min.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/jquery.json.min.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/jquery.showpassword.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/jquery.textcomplies.js.Без названия"></script>
+<link rel="stylesheet" type="text/css" href="./Log In to Availity®_files/elegant_login.css" media="all">
+<link rel="stylesheet" type="text/css" href="./Log In to Availity®_files/elegant_login_error.css" media="all">
+<script type="text/javascript" src="./Log In to Availity®_files/elegant.login.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/ieretirement.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/fingerprint2.min.js.Без названия"></script>
+<link rel="stylesheet" type="text/css" href="./Log In to Availity®_files/elegant-login-timeout-modal.css" media="all">
+<script type="text/javascript" src="./Log In to Availity®_files/elegantLoginTimeoutModal.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/RoboHelp_CSH.js.Без названия"></script>
+<script type="text/javascript" src="./Log In to Availity®_files/wicket-event.js.Без названия"></script>
+<script type="text/javascript"><!--/*--><![CDATA[/*><!--*/
+Wicket.Event.add(window, "load", function(event) { $('#password').showPassword({'checkbox':'#checkbox'});;});
+/*-->]]>*/</script>
+
+<script type="text/javascript"><!--/*--><![CDATA[/*><!--*/
+Wicket.Event.add(window, "load", function(event) { document.getElementById('userId').focus();;});
+/*-->]]>*/</script>
+
+<script type="text/javascript" src="./Log In to Availity®_files/wicket-ajax.js.Без названия"></script>
+</head>
+<body>
+	
+	<div role="main"> 
+	
+	
+	<div id="ie8-retirement-message" style="display: none;">
+		<div class="phi-warning-container">
+			<div class="phi-warning-sub-container">
+			<span class="phi-warning-content">
+				<img class="phi-warning-icon" src="./Log In to Availity®_files/icon_alert.png" alt="PHI Warning!">
+			</span>
+			<span class="phi-warning-content">
+				<p><strong>WARNING!</strong> Availity will not work because you are using an unsupported browser. Availity supports <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" rel="noopener noreferrer">Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer">Firefox</a>, and <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" target="_blank" rel="noopener noreferrer">Internet Explorer 11</a>. Upgrade now.</p>
+			</span>
+			</div>
+		</div>
+	</div>
+	<div id="ie-compat-message" style="display: none;">
+		<div class="phi-warning-container">
+			<div class="phi-warning-sub-container">
+			<span class="phi-warning-content">
+				<img class="phi-warning-icon" src="./Log In to Availity®_files/icon_alert.png" alt="PHI Warning!">
+			</span>
+			<span class="phi-warning-content">
+				<p><strong>Uh-oh!</strong> Availity will not work because you are using a browser in compatibility view. <a href="https://apps.availity.com/availity/AvHelp/Troubleshooting/Access_Problems/Turning_off_Compatibility_View.htm" target="_blank" rel="noopener noreferrer" style="color: #2261b5 !important">Turn off compatibility view</a> now to access the Availity Web Portal.</p>
+			</span>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		  <div id="IECompatibilityMode" style="display: none;">
+		       <div style="margin-left: 15px;">
+				     <b>Uh-oh. Your browser is in compatibility view.</b>
+			    	
+			    <p style="font-size: 13px">If you choose not to turn off compatibility view, we recommend using <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Firefox</a>.</p>  
+			    <div class="pageBreak"></div>
+				</div>
+			    <div class="ieButtonsCenter">
+			         <button id="turnIECompatOff" class="upgrade" style="width:350px" onclick="displayCompatPage()"><span style="font-size:20">Learn how to turn off compatibility view</span></button>
+			    </div>
+				<div class="pageBreak"></div>
+		  </div>
+		  
+		  <div id="IERetirementModal" style="display: none;">
+		       <div style="margin-left: 15px;">
+				     <b>Uh-oh. You're using an unsupported browser.</b>
+			    	
+			    <p style="font-size: 13px">You will no longer be able to access the portal after July 15, 2017. Availity supports <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Firefox</a>, and <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Internet Explorer 11</a>. Upgrade now.</p>    
+			    <div class="pageBreak"></div>
+				</div>
+			    <div class="ieButtonsCenter">
+			         <button id="doLaterButton" onclick="doLater()"><span style="font-size:10">Not now, I’ll do it before July 15, 2017.</span></button>
+			    </div>
+				<div class="pageBreak"></div>
+		  </div>
+		  
+		  <div id="IERetiredModal" style="display: none;">
+		       <div style="margin-left: 15px;">
+				     <b>Uh-oh. You're using an unsupported browser.</b>
+			    	
+			    <p style="font-size: 13px">Availity supports <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Firefox</a>, and <a href="https://www.microsoft.com/en-us/download/internet-explorer.aspx" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Internet Explorer 11</a>. Upgrade now.</p>  
+			    <div class="pageBreak"></div>
+				</div>
+		  </div>
+
+      <div id="DismissableUnsupportedBrowserModal" style="display: none;">
+           <div style="margin-left: 15px;">
+             <b>Uh-oh. You're using an unsupported browser.</b>
+            
+             <p style="font-size: 13px">Try using <a href="https://www.google.com/chrome/browser/desktop/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Chrome</a>, <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Firefox</a>, or <a href="https://www.availity.com/documents/IE_Windows10_Notification/Accessing_Internet_Explorer_in_Windows_10.htm" target="_blank" rel="noopener noreferrer" style="color: #2261b5">Internet Explorer 11</a> to have a better experience on the Availity Web Portal.</p>  
+          <div class="pageBreak"></div>
+        </div>
+          <div class="ieButtonsCenter">
+               <button id="closeUnsupportedBrowserModal" onclick="closeUnsupportedBrowserModal()"><span style="font-size:10">Not now, I’ll do it later</span></button>
+          </div>
+        <div class="pageBreak"></div>
+      </div>
+		  
+		<div class="centerContent">
+			<div id="loginHeader">
+				<div class="loginLogoPrivacy">&nbsp;</div>
+				<!--  	<img src="images/header-logo.gif" width="129" height="63" alt="Availity Logo" /> -->
+				
+			</div>
+			<span id="feedback">
+		<div class="feedback" id="the_feedback">      
+     	<ul>
+     		<li>
+     			<span><b>User ID and Password: </b>These fields are both required.</span>
+     		</li>
+     	</ul>
+    </div>
+	</span>
+			<div id="elegantPanel">
+		<h1 style="font-size: large;">&nbsp;&nbsp; Please enter your
+			credentials</h1>
+		<form id="id1" class="loginContent" autocomplete="off" method="post" action="https://apps.availity.com/availity/web/public.elegant.login/wicket:interface/:0:elegantPanel:loginForm::IFormSubmitListener::?wicket:pcxt=ElegantLoginPage"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="elegantPanel_loginForm_hf_0" id="elegantPanel_loginForm_hf_0"></div><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="text" autocomplete="false"><input type="submit" name="loginButton" onclick=" var b=document.getElementById(&#39;loginFormSubmit&#39;); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != &#39;undefined&#39;) {  var r = b.onclick.bind(b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+			<label for="userId">User ID:</label> <input type="text" class="userId" maxlength="15" value="" name="userId" id="userId">
+			<div>
+				<label for="password">Password:</label> <span class="w">
+					<input id="password" type="password" class="input loginPassword" maxlength="15" autocomplete="off" value="" name="password"><input type="text" class="input loginPassword" size="20" maxlength="15" name="password-text" tabindex="0" style="display: none;"><br>
+					<span class="showPassword"><input id="checkbox" type="checkbox" class="showPasswordCheckbox"><label for="checkbox">&nbsp;&nbsp;Show password</label></span>
+				</span>
+			</div>
+			<input type="hidden" id="fingerprint" name="fingerprint" value="{&quot;user_agent&quot;:&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36&quot;,&quot;language&quot;:&quot;en-US&quot;,&quot;color_depth&quot;:&quot;24&quot;,&quot;device_memory&quot;:&quot;8&quot;,&quot;hardware_concurrency&quot;:&quot;2&quot;,&quot;resolution&quot;:&quot;1600,900&quot;,&quot;available_resolution&quot;:&quot;1600,778&quot;,&quot;timezone_offset&quot;:&quot;240&quot;,&quot;session_storage&quot;:&quot;1&quot;,&quot;local_storage&quot;:&quot;1&quot;,&quot;indexed_db&quot;:&quot;1&quot;,&quot;open_database&quot;:&quot;1&quot;,&quot;cpu_class&quot;:&quot;unknown&quot;,&quot;navigator_platform&quot;:&quot;Win32&quot;,&quot;regular_plugins&quot;:&quot;Chrome PDF Plugin::Portable Document Format::application/x-google-chrome-pdf~pdf,Chrome PDF Viewer::::application/pdf~pdf,Native Client::::application/x-nacl~,application/x-pnacl~&quot;,&quot;canvas&quot;:&quot;bbf026828ce544148cc73aacb28a822f&quot;,&quot;webgl&quot;:&quot;9fff3719d944ff73485da1aacf75539b&quot;,&quot;webgl_vendor&quot;:&quot;Google Inc.~ANGLE (AMD Radeon(TM) R2 Graphics Direct3D11 vs_5_0 ps_5_0)&quot;,&quot;adblock&quot;:&quot;true&quot;,&quot;has_lied_languages&quot;:&quot;false&quot;,&quot;has_lied_resolution&quot;:&quot;false&quot;,&quot;has_lied_os&quot;:&quot;false&quot;,&quot;has_lied_browser&quot;:&quot;false&quot;,&quot;touch_support&quot;:&quot;0,false,false&quot;,&quot;js_fonts&quot;:&quot;Arial,Arial Black,Arial Narrow,Book Antiqua,Bookman Old Style,Calibri,Cambria,Cambria Math,Century,Century Gothic,Century Schoolbook,Comic Sans MS,Consolas,Courier,Courier New,Georgia,Helvetica,Impact,Lucida Bright,Lucida Calligraphy,Lucida Console,Lucida Fax,Lucida Handwriting,Lucida Sans,Lucida Sans Typewriter,Lucida Sans Unicode,Microsoft Sans Serif,Monotype Corsiva,MS Gothic,MS PGothic,MS Reference Sans Serif,MS Sans Serif,MS Serif,Palatino Linotype,Segoe Print,Segoe Script,Segoe UI,Segoe UI Light,Segoe UI Semibold,Segoe UI Symbol,Tahoma,Times,Times New Roman,Trebuchet MS,Verdana,Wingdings,Wingdings 2,Wingdings 3&quot;,&quot;audio_fp&quot;:&quot;124.04344884395687&quot;,&quot;hash&quot;:&quot;b0f28375f147e2b3e8eda456fff0daed&quot;}">
+			<div class="buttons">
+				<div class="forgotPasswordOrUserId">
+					<div class="forgotPasswordOrUserId">
+						<a href="https://apps.availity.com/availity/web/public.elegant.login#" id="iForgotMyPasword" name="iForgotMyPasword" onclick="if (function(){return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this)()) { Wicket.showIncrementally(&#39;iForgotMyPasword--ajax-indicator&#39;);}var wcall=wicketSubmitFormById(&#39;id1&#39;, &#39;./jolira:stateless?jolira:stateless=com.availity.axi.web.pages.elegant.login.ElegantLoginPage:0:IActivePageBehaviorListener:0:elegantPanel:loginForm:iForgotMyPasword:&#39;, &#39;iForgotMyPasword&#39; ,function() { this.disabled = false;;Wicket.hideIncrementally(&#39;iForgotMyPasword--ajax-indicator&#39;);}.bind(this),function() { ;Wicket.hideIncrementally(&#39;iForgotMyPasword--ajax-indicator&#39;);this.disabled = false;}.bind(this), function() {if (!function() {return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this)()) {Wicket.hideIncrementally(&#39;iForgotMyPasword--ajax-indicator&#39;);}return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this));this.disabled = true;;; return false;">Forgot
+							your password?</a><span style="display:none;" class="wicket-ajax-indicator" id="iForgotMyPasword--ajax-indicator"><img src="./Log In to Availity®_files/indicator.gif" alt=""></span>
+					</div>
+					<div class="forgotPasswordOrUserId">
+						<a href="https://apps.availity.com/availity/web/public.elegant.login#" id="iForgotMyUserId" name="iForgotMyUserId" onclick="if (function(){return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this)()) { Wicket.showIncrementally(&#39;iForgotMyUserId--ajax-indicator&#39;);}var wcall=wicketSubmitFormById(&#39;id1&#39;, &#39;./jolira:stateless?jolira:stateless=com.availity.axi.web.pages.elegant.login.ElegantLoginPage:0:IActivePageBehaviorListener:0:elegantPanel:loginForm:iForgotMyUserId:&#39;, &#39;iForgotMyUserId&#39; ,function() { this.disabled = false;;Wicket.hideIncrementally(&#39;iForgotMyUserId--ajax-indicator&#39;);}.bind(this),function() { ;Wicket.hideIncrementally(&#39;iForgotMyUserId--ajax-indicator&#39;);this.disabled = false;}.bind(this), function() {if (!function() {return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this)()) {Wicket.hideIncrementally(&#39;iForgotMyUserId--ajax-indicator&#39;);}return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this));this.disabled = true;;; return false;">Forgot
+							your user ID?</a><span style="display:none;" class="wicket-ajax-indicator" id="iForgotMyUserId--ajax-indicator"><img src="./Log In to Availity®_files/indicator.gif" alt=""></span>
+					</div>
+				</div>
+				<input class="loginButton btn btn-warning btn-large" type="button" value="Log in" name="loginButton" id="loginFormSubmit" onclick="if (ElegantLogin &amp;&amp; ElegantLogin.onSubmit) {ElegantLogin.onSubmit()};if (function(){return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this)()) { Wicket.showIncrementally(&#39;loginFormSubmit--ajax-indicator&#39;);}var wcall=wicketSubmitFormById(&#39;id1&#39;, &#39;./jolira:stateless?jolira:stateless=com.availity.axi.web.pages.elegant.login.ElegantLoginPage:0:IActivePageBehaviorListener:0:elegantPanel:loginForm:loginButton:&#39;, &#39;loginButton&#39; ,function() { this.disabled = false;;Wicket.hideIncrementally(&#39;loginFormSubmit--ajax-indicator&#39;);}.bind(this),function() { ;Wicket.hideIncrementally(&#39;loginFormSubmit--ajax-indicator&#39;);this.disabled = false;}.bind(this), function() {if (!function() {return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this)()) {Wicket.hideIncrementally(&#39;loginFormSubmit--ajax-indicator&#39;);}return Wicket.$$(this)&amp;&amp;Wicket.$$(&#39;id1&#39;)}.bind(this));this.disabled = true;;; return false;"><span style="display: none;" class="wicket-ajax-indicator" id="loginFormSubmit--ajax-indicator" showincrementallycount="0"><img src="./Log In to Availity®_files/indicator.gif" alt=""></span>
+			</div>
+			
+		</form>
+	</div>		
+			<div id="footer" style="display:none"></div>
+			<div id="passwordExpiry"></div>
+		</div>
+	</div>
+	</div>
+	
+	
+
+
+</body></html>
